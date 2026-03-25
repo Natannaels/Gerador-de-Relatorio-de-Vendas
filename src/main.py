@@ -3,7 +3,12 @@ from enviar_email import enviar_email
 
 faturamento, quantidade_vendas, ticket_medio = gerar_relatorio()
 
-conteudo = f"""Subject: Relatório TESTE 6
+assunto = 'Relatório automatico teste'
+remetente = 'remetente@gmail.com'
+senha = 'Senha de APP'
+destinatarios = ['destinatario@gmail.com']
+
+conteudo = f"""
 
     <p>Prezados,</p>
 
@@ -23,4 +28,4 @@ conteudo = f"""Subject: Relatório TESTE 6
     <p>Ghiblicat</p>
     """
 
-enviar_email(conteudo)
+enviar_email(conteudo, assunto, remetente, senha, destinatarios)

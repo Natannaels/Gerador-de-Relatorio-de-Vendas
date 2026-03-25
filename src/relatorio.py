@@ -4,11 +4,9 @@ def gerar_relatorio():
     # importar a base de dados
     tabela_vendas = pd.read_excel('data/Vendas.xlsx')
 
-
     # visualizar a base de dados
-    pd.set_option('display.max_columns', None)
+    pd.set_option('display.max_columns', None)#define o maximo de colunas a ser exibido 
     print(tabela_vendas[['ID Loja', 'Valor Final']])
-
 
     # faturamento por loja
     #tabela_vendas.groupby('ID Loja').sum()
